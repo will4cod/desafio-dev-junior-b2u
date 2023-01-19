@@ -5,7 +5,7 @@ const SearchBar = () => {
 
     return(
 
-        <div>
+        <div className="searchContainer">
             <input type="search"></input>
 
             <button>Buscar</button>
