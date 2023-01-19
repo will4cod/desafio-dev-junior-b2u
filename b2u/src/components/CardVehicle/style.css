@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: rgb(240, 240, 240);
+}
+
+img{
+    width: 300px;
+    margin-left: 10px;
+}
+
+.info{
+    margin-left: 20px;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.info h1{
+    font-size: 16px;
+}
+
+.info ul{
+    list-style: none;
+}
+
+.info ul li:first-of-type{
+    margin-bottom: 8px;
+}
