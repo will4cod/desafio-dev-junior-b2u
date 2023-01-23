@@ -1,20 +1,20 @@
 import React from "react";
 import './style.css';
 
-const CardVehicle = () => {
+const CardVehicle = (props) => {
 
     return(
         <div className="container">
             <div>
-                <img src="https://i0.statig.com.br/bancodeimagens/bs/5o/6l/bs5o6lyohfx0eokwulv72vrkz.jpg"></img>
+                <img src={props.img}></img>
             </div>
 
             <div className="info">
-                <h1>Nome carro</h1>
+                <h1>{props.nome}</h1>
 
                 <ul>
-                    <li>🚗 - Marca</li>
-                    <li>📅 - Ano</li>
+                    <li>🚗 - {props.marca}</li>
+                    <li>📅 - {props.ano}</li>
                 </ul>
             </div>
         </div>

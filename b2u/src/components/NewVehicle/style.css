@@ -1,0 +1,21 @@
+.new-vehicle{
+    width: 90%;
+    height: 80px;
+    background-color: transparent;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.new-vehicle button{
+    padding: 5px 10px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: lightseagreen;
+    margin-right: 80px;
+}
