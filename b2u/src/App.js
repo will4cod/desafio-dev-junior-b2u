@@ -23,9 +23,10 @@ function App() {
 
   useEffect(() => {
     console.log('carregou');
+    
     fetchVehicles();
   }, [])
-
+  
   
   return (
     <div className='app'>
@@ -39,7 +40,7 @@ function App() {
     <div className='list'>
       {vehicles && vehicles.map((vei) => {
         return(
-          <CardVehicle key={vei.ID} img={vei.Imagem} nome={vei.Nome} ano={vei.Ano} marca={vei.Marca} />
+          <CardVehicle key={vei.id} img={vei.Imagem} nome={vei.Nome} ano={vei.Ano} marca={vei.Marca} dono={vei.Dono} />
         )
       })}
     </div>

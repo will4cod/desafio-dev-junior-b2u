@@ -14,8 +14,9 @@ const veiculos = [{
     "id":1,
     "Nome":"Gol",
     "Marca":"Volkswagen",
-    "Ano de fabricação":"2015",
+    "Ano":"2015",
     "Descrição":"detalhes na funilaria",
+    "Imagem":"https://http2.mlstatic.com/D_NQ_NP_612987-MLB51001393974_082022-W.jpg",
     "Dono":{
        "Nome":"Lucas Santos",
        "Email":"lucas.santos@teste.com",
@@ -26,8 +27,9 @@ const veiculos = [{
     "id":2,
     "Nome":"Onix",
     "Marca":"Chevrolet",
-    "Ano de fabricação":"2023",
+    "Ano":"2023",
     "Descrição":"0km",
+    "Imagem":"https://garagem360.com.br/wp-content/uploads/2022/11/onixrs2023-10.jpg",
     "Dono":{
        "Nome":"Jair Antonio",
        "Email":"jair.antonio@teste.com",
@@ -38,8 +40,9 @@ const veiculos = [{
     "id":3,
     "Nome":"HB20",
     "Marca":"Hyundai",
-    "Ano de fabricação":"2017",
+    "Ano":"2017",
     "Descrição":"Necessario trocar os pneus",
+    "Imagem":"https://i0.statig.com.br/bancodeimagens/7d/fn/ji/7dfnjic7117owc7fk0tfzsop3.jpg",
     "Dono":{
        "Nome":"Ana Silva",
        "Email":"ana.silva@teste.com",
@@ -47,11 +50,12 @@ const veiculos = [{
     }
  },
  {
-    "id":3,
+    "id":4,
     "Nome":"Polo",
     "Marca":"Volkswagen",
-    "Ano de fabricação":"2022",
+    "Ano":"2022",
     "Descrição":"seminovo",
+    "Imagem":"https://quatrorodas.abril.com.br/wp-content/uploads/2021/04/Volkswagen-Polo-2022-frente.jpg?quality=70&strip=info&w=700&resize=1200,800",
     "Dono":{
        "Nome":"Felipe Santos",
        "Email":"felipe.santos@teste.com",
@@ -59,11 +63,12 @@ const veiculos = [{
     }
  },
  {
-    "id":4,
+    "id":5,
     "Nome":"Uno",
     "Marca":"Fiat",
-    "Ano de fabricação":"2010",
+    "Ano":"2010",
     "Descrição":"carro de trabalho",
+    "Imagem":"https://www.oficinabrasil.com.br/uploads/images/direto-do-forum/fiat2.jpg",
     "Dono":{
        "Nome":"Vitor Ferreto",
        "Email":"vitor.ferreto@teste.com",
@@ -74,6 +79,12 @@ const veiculos = [{
 ]
 
 // const veiculos = ['Gol', 'onix', 'HB20'];
+
+server.use(function(req, res, next) {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+   next();
+});
 
 // Retorna um veiculo
 server.get('/veiculo/:index', (req, res) => {
