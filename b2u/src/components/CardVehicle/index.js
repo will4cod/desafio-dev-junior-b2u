@@ -7,6 +7,7 @@ const CardVehicle = (props) => {
 
     const [isOpen, setOpen] = useState(false);
 
+
     function openEditCar () {
 
         isOpen == true? setOpen(false): setOpen(true); 
@@ -53,7 +54,7 @@ const CardVehicle = (props) => {
                     <input type='email' value={props.dono.Email}></input>
 
                     <label>Telefone</label>
-                    <input type='text' value={props.dono.Telefon}></input>
+                    <input type='tel' value={props.dono.Telefon}></input>
 
                     <br />
 

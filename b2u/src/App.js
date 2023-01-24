@@ -10,6 +10,7 @@ function App() {
 
   const [vehicles, setVehicles] = useState([]);
 
+
   const fetchVehicles = async () => {
     try{
       const result = await getVehicles();
@@ -25,7 +26,7 @@ function App() {
     console.log('carregou');
     
     fetchVehicles();
-  }, [])
+  }, [setVehicles])
   
   
   return (
@@ -35,7 +36,7 @@ function App() {
 
     <SearchBar />
 
-    <NewVehicle />
+    <NewVehicle vehicles={vehicles} setVehicles={setVehicles} />
     
     <div className='list'>
       {vehicles && vehicles.map((vei) => {

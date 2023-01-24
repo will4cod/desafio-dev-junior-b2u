@@ -1,11 +1,11 @@
 .new-vehicle{
     width: 90%;
-    height: 80px;
+    margin-bottom: 30px;
     background-color: transparent;
     margin-top: 40px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: end;
     justify-content: flex-end;
 }
 
@@ -18,4 +18,52 @@
     color: white;
     background-color: lightseagreen;
     margin-right: 80px;
+}
+
+.form{
+    width: 80%;
+    margin: 30px 10px;
+    display: none;
+    transition: .3s;
+}
+
+.form input{
+    margin: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+.form input:hover, input:focus{
+    border: 1px solid lightseagreen;
+    outline: none;
+}
+
+.form input[type='text']{
+    width: 16%;
+}
+
+.form input[type='email']{
+    width: 22%;
+}
+
+.form input[type='url']{
+    width: 40%;
+}
+
+.form button{
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: lightseagreen;
+    margin-top: 20px;
+    float: right;
+}
+
+.open{
+    display: block;
 }
