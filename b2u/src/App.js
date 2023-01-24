@@ -1,5 +1,5 @@
 import './App.css';
-import { getVehicles } from './api';
+import { deleteVehicle, getVehicles } from './api';
 import CardVehicle from './components/CardVehicle';
 import Header from './components/Header';
 import NewVehicle from './components/NewVehicle';
@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [vehicles, setVehicles] = useState([]);
-
 
   const fetchVehicles = async () => {
     try{
@@ -21,6 +20,7 @@ function App() {
       console.log('fetchVehicles error: ', error);
     }
   }
+
 
   useEffect(() => {
     console.log('carregou');
@@ -41,7 +41,7 @@ function App() {
     <div className='list'>
       {vehicles && vehicles.map((vei) => {
         return(
-          <CardVehicle key={vei.id} img={vei.Imagem} nome={vei.Nome} ano={vei.Ano} marca={vei.Marca} dono={vei.Dono} />
+          <CardVehicle key={vei.id} id={vei.id} img={vei.Imagem} nome={vei.Nome} ano={vei.Ano} marca={vei.Marca} dono={vei.Dono} setVehicles={setVehicles} />
         )
       })}
     </div>

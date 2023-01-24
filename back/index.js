@@ -142,5 +142,5 @@ server.delete('/veiculo/:index', (req, res) => {
     }
 
     veiculos.splice(idArray, 1);
-    return res.json({message : 'Veiculo deletado com sucesso!!'})
+    return res.json(veiculos);
 });

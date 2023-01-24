@@ -26,3 +26,14 @@ export const newVehicle = async (requestData) => {
         console.log('error: ', error)
     }
 }
+
+export const deleteVehicle = async (id) => {
+
+    try{
+       const response = await fetch(`http://localhost:3003/veiculo/${id}`, {method:"delete"})
+       return await response.json()
+
+    } catch (error) {
+        console.log('error: ', error)
+    }
+}

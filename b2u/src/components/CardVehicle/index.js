@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './style.css';
 import edit from '../../botao-editar.png';
 import excluir from '../../excluir.png';
+import { deleteVehicle } from "../../api";
 
 const CardVehicle = (props) => {
 
@@ -12,6 +13,18 @@ const CardVehicle = (props) => {
 
         isOpen == true? setOpen(false): setOpen(true); 
     }
+
+    async function delVehicles(){
+        try{
+          const result = await deleteVehicle(props.id);
+          props.setVehicles(result)
+        }
+    
+        catch(error){
+          console.log('fetchVehicles error: ', error);
+        }
+    }
+    
 
     return(
         <div className="container">
@@ -29,7 +42,7 @@ const CardVehicle = (props) => {
             </div>
 
             <div className="options">
-                <img src={excluir} placeholder='Excluir'/>
+                <img src={excluir} placeholder='Excluir' onClick={delVehicles}/>
                 <img src={edit} placeholder='Editar' onClick={openEditCar}/>
             </div>
 
